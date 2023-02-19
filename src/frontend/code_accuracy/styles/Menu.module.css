@@ -1,0 +1,144 @@
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color-1);
+    text-decoration: none;
+}
+
+.logo_image {
+    margin: 0 calc(var(--padding) / 2) 2px calc(var(--padding) / 2);
+    height: calc(25px + 1vmin);
+    width: calc(25px + 1vmin);
+}
+
+/* Desktop styling */
+.desktopMenuContainer {
+    width: 100%;
+    height: var(--menu-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--dark-color-2);
+
+    color: rgb(255 255 255);
+}
+
+.desktopLinksContainer { 
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.desktopListItem {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktopLink {
+    text-decoration: none;
+    color: rgb(255, 255, 255, .75);
+}
+
+.desktopActivePage {
+    border-bottom: solid white 2px;
+}
+
+.desktopActivePage .desktopLink {
+    color: rgb(255, 255, 255, 1);
+}
+
+/* Mobile styling */
+.mobileMenuContainer {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: var(--menu-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(40 40 40);
+
+    color: rgb(255 255 255);
+
+    box-shadow: rgba(0, 0, 0, 1) 0 0 6px
+}
+
+.mobileMenuButton {
+    background: none;
+    border: none;
+    color: rgb(255 255 255);
+    height: 100%;
+}
+
+.mobileMenuDropDown {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+
+    height: var(--mobile-dropdown-item-height);
+
+    bottom: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-color-2);
+
+    transition: 0.2s ease;
+}
+
+.dropDownOpen {
+    bottom: calc(100% - var(--menu-height) - var(--mobile-dropdown-item-height));
+}
+
+/* .dropDownClose {
+    bottom: 100%;
+} */
+
+.mobileListItem {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobileActivePage {
+
+}
+
+.mobileLink {
+    text-decoration: none;
+    color: rgb(255, 255, 255, .75);
+}
+
+@media all and (min-width: 650px) {
+    .desktopMenuContainer {
+        display: flex;
+    }
+    .mobileMenuParent {
+        display: none;
+    }
+}
+
+@media all and (max-width: 649px) {
+    .desktopMenuContainer {
+        display: none;
+    }
+    .mobileMenuParent {
+        display: flex;
+    }
+}

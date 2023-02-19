@@ -1,0 +1,44 @@
+:root {
+    --menu-height: 50px;
+    --mobile-dropdown-item-height: 150px;
+
+    --border-radius-1: 9999px;
+
+    --large-font: calc(18px + 1vmin);
+    --medium-font: calc(12px + 1vmin);
+    --small-font: calc(8px + 1vmin);
+
+    --padding: calc(6px + 1vmin);
+
+    --dark-color-1: rgb(26, 26, 26);
+    --dark-color-2: rgb(40, 40, 40);
+    --dark-color-3: hsla(0, 0%, 100%, .1);
+    --dark-color-4: hsla(0, 0%, 100%, .07);
+
+    --accent-color-1: goldenrod;
+    --accent-color-2: rgb(44, 187, 93);
+    --accent-color-3: rgb(255, 55, 95);
+    --accent-color-4: rgb(24, 144, 255);
+
+    --background-color-1: rgba(255, 192, 30, 0.5);
+    --background-color-2: rgba(0, 184, 163, 0.5);
+    --background-color-3: rgb(255, 55, 95, 0.5);
+    
+    --light-color-1: white;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif !important;
+
+}
+
+.pageContainer {
+    z-index: 0;
+    background-color: var(--dark-color-1);
+    color: white;
+    height: calc(100vh - var(--menu-height));
+    width: 100vw;
+    position: absolute;
+    top: var(--menu-height);
+    overflow: scroll;
+}

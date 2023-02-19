@@ -1,0 +1,23 @@
+.footer_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: var(--small-font);
+    margin: var(--padding) 0;
+    padding: var(--padding) 0;
+}
+
+.footer_item {
+    color: var(--accent-color-1);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer_border {
+    height: calc(12px + 1vmin);
+    border: solid var(--light-color-1) 1px;
+}

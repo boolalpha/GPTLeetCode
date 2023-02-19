@@ -1,0 +1,41 @@
+.detail_section_container {
+    padding: calc(var(--padding) * 3);
+    margin-bottom: calc(var(--padding) * 4);
+}
+
+.header {
+    width: 100%;
+    font-size: var(--large-font);
+    text-align: left;
+    padding-bottom: var(--padding);
+    border-bottom: solid var(--accent-color-1) 1px;
+    margin-bottom: var(--padding);
+    color: var(--accent-color-1);
+}
+
+.basic_text {
+    text-align: center;
+    line-height: 2;
+}
+
+.algorithm_list {
+    list-style: upper-roman;
+    padding: var(--padding) var(--padding) var(--padding) calc(var(--padding) + 32px);
+    line-height: 2;
+}
+
+.algorithm_list_1 {
+    list-style: lower-roman;
+    padding: var(--padding) var(--padding) var(--padding) calc(var(--padding) + 32px);
+    line-height: 2;
+}
+
+.link {
+    color: var(--accent-color-1);
+}
+
+.unordered_list {
+    list-style: circle;
+    padding: var(--padding) var(--padding) var(--padding) calc(var(--padding) + 32px);
+    line-height: 2;
+}
