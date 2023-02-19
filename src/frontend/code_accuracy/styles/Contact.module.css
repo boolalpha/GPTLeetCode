@@ -1,0 +1,15 @@
+.contact_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100% - var(--menu-height));
+}
+
+.contact_item {
+    padding: var(--padding);
+    color: var(--light-color-1);
+    text-decoration: none;
+    border-radius: var(--border-radius-1);
+    background-color: var(--background-color-1);
+}

@@ -1,0 +1,41 @@
+.topics_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.topic_button {
+    padding: calc(var(--padding) / 2) var(--padding);
+    margin: var(--padding);
+    color: white;
+    border: solid 2px var(--accent-color-1);
+    border-radius: 9999px;
+    background-color: var(--accent-color-1);
+    cursor: pointer;
+}
+
+.data_grid {
+    color: white !important;
+}
+
+.even_row {
+    background-color: var(--dark-color-1);
+}
+
+.odd_row {
+    background-color: var(--dark-color-4);
+}
+
+.red {
+    color: var(--accent-color-3);
+}
+
+.orange {
+    color: var(--accent-color-1);
+}
+
+.green {
+    color: var(--accent-color-2);
+}
