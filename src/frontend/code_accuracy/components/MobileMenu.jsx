@@ -25,7 +25,7 @@ export default function MobileMenu(props) {
     return (
         <div className={styles.mobileMenuParent}>
             <div className={styles.mobileMenuContainer}>
-                <Link className={styles.logo} href="./">
+                <Link className={styles.logo} href="./" onClick={(e) => {e.stopPropagation();}}>
                     <Image src="/GPTLeetCode-Logo.png" alt="Logo" className={styles.logo_image} height={25} width={25}/>
                     ChatGPT Leetcode
                 </Link>
