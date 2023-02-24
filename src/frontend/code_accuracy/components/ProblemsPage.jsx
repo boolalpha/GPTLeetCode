@@ -4,7 +4,7 @@ import React, { useCallback, useState } from "react";
 // import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 // works
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridColumnHeaderParams } from '@mui/x-data-grid';
 
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
@@ -20,12 +20,11 @@ export default function ProblemsPage() {
     const columns = [
         { 
             field: 'id', 
-            headerName: 'Problem Number',
+            headerName: 'Number',
             flex: 1,
             align: 'center',
             headerAlign: 'center',
-            headerClassName: "super-app-theme--header"
-
+            headerClassName: 'header_style'
         },
         {
             field: 'title',
@@ -33,7 +32,7 @@ export default function ProblemsPage() {
             flex: 1,
             align: 'center',
             headerAlign: 'center',
-      
+            headerClassName: 'header_style'
         },
         {
             field: 'difficulty',
@@ -53,7 +52,8 @@ export default function ProblemsPage() {
                         {mui_details.row.difficulty}
                     </p>
                 );
-            }
+            },
+            headerClassName: 'header_style'
         },
         {
             field: 'succeeded',
@@ -71,7 +71,8 @@ export default function ProblemsPage() {
                         {mui_details.row.succeeded}
                     </p>
                 );
-            }
+            },
+            headerClassName: 'header_style'
         },
         {
             field: "topics",
@@ -99,7 +100,8 @@ export default function ProblemsPage() {
                         )}
                     </div>
                 );
-            }
+            },
+            headerClassName: 'header_style'
         }
       
     ];

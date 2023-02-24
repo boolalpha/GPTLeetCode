@@ -1,7 +1,5 @@
 import breakdown_results from '../public/data/breakdown_results.json';
 import React, { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
@@ -43,11 +41,9 @@ export default function MainPage() {
     }
 
 
-    function toggleCloseCategory(event) {
-        if (event.target.className == "Home_categoryHeaderContainer__Tw_Bt") {
-            event.target.children[1].classList.toggle(styles.chevronDown);
-            event.target.nextSibling.classList.toggle(styles.closeProgressContainer);
-        }
+    function toggleCloseCategory(elem) {
+        elem.children[1].classList.toggle(styles.chevron_down);
+        elem.nextSibling.classList.toggle(styles.close_progress_container);
     }
 
     // render() {
@@ -74,11 +70,11 @@ export default function MainPage() {
                 <p className={styles.opening_header}>The results of OpenAI's ChatGPT ran against every (non-premium) Leetcode problem.</p>
                 {Object.keys(breakdown_results).map((category) => (
                     <div className={styles.category_container} key={category}>
-                        <div className={styles.category_header_container} onClick={toggleCloseCategory}>
-                            <p>{front_end_label[category]}</p>
-                            <FontAwesomeIcon icon={faChevronDown} className={`${styles.chevron} ${category == "algorithm_breakdown" && styles.chevron_down}`}/>
+                        <div className={styles.category_header_container} onClick={(e) => {toggleCloseCategory(e.target)}}>
+                            <p onClick={(e) => {e.stopPropagation(); toggleCloseCategory(e.target.parentNode)}}>{front_end_label[category]}</p>
+                            <img src="/down.png" className={`${styles.chevron} ${category == "algorithm_breakdown" && styles.chevron_down}`} onClick={(e) => {e.stopPropagation(); toggleCloseCategory(e.target.parentNode)}}/>
                         </div>
-                        <div className={`${styles.progress_container} ${category == "algorithm_breakdown" && styles.close_progress_container}`}>
+                        <div className={`${styles.progress_container} ${(category == "algorithm_breakdown" || category == "runtime_breakdown") && styles.close_progress_container}`}>
                             {Object.keys(breakdown_results[category]).map((result) => (
                                 <div className={styles.result_container} key={result}>
                                     <p>{result.replace("_", " ").toLowerCase()
