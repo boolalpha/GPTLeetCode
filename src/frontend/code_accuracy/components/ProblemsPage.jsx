@@ -1,9 +1,6 @@
 import all_problems from '../public/data/all_problems.json';
 import React, { useCallback, useState } from "react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-// works
 import { DataGrid, GridColumnHeaderParams } from '@mui/x-data-grid';
 
 import DesktopMenu from "./DesktopMenu";
@@ -166,7 +163,8 @@ export default function ProblemsPage() {
                         & .MuiButtonBase-root, \
                         & .MuiIconButton-root": {
                             color: "white"
-                        }
+                        },
+                        minWidth: "750px",
                     }}
                     rows={rows}
                     columns={columns}

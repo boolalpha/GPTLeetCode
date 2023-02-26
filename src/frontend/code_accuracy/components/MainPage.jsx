@@ -77,10 +77,12 @@ export default function MainPage() {
                         <div className={`${styles.progress_container} ${(category == "algorithm_breakdown" || category == "runtime_breakdown") && styles.close_progress_container}`}>
                             {Object.keys(breakdown_results[category]).map((result) => (
                                 <div className={styles.result_container} key={result}>
-                                    <p>{result.replace("_", " ").toLowerCase()
+                                    <p className={styles.result_title}>
+                                        {result.replace("_", " ").toLowerCase()
                                         .split(' ')
                                         .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-                                        .join(' ')}</p>
+                                        .join(' ')}
+                                    </p>
                                     <div className={styles.progressbar_wrapper}>
                                         <CircularProgressbar
                                             value={
@@ -102,7 +104,7 @@ export default function MainPage() {
                                     </div>
                                     { 
                                         breakdown_results[category][result]["total"] && 
-                                            <p>
+                                        <p className={styles.result_breakdown}>
                                             {
                                                 breakdown_results[category][result]["amount"]
                                             }
@@ -110,7 +112,7 @@ export default function MainPage() {
                                             {
                                                 breakdown_results[category][result]["total"]
                                             }
-                                            </p>
+                                        </p>
                                     }
                                 </div>
                             ))}

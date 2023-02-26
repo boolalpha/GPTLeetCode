@@ -5,7 +5,7 @@
     align-items: center;
     font-size: var(--small-font);
     margin: var(--padding) 0;
-    padding: var(--padding) 0;
+    padding: var(--padding) 0 64px 0;
 }
 
 .footer_item {
