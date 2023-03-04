@@ -11,12 +11,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import styles from '../styles/Home.module.css'
 
 
-// class MainPage extends React.Component <{}> {
 export default function MainPage() {
-    // const [enableMobileMenu, setEnableMenu] = useState(false);
-
-    // const percentage = 66;
-
     const front_end_label = {
         overall: "Overall Results",
         difficulty: "Breakdown by Difficulty",

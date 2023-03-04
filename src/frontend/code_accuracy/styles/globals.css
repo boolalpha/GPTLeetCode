@@ -37,6 +37,7 @@
     background-color: var(--dark-color-1);
     color: white;
     height: calc(100vh - var(--menu-height));
+    height: -webkit-fill-available;
     width: 100vw;
     position: absolute;
     top: var(--menu-height);

@@ -100,7 +100,7 @@
 
     height: var(--mobile-dropdown-item-height);
 
-    bottom: 100%;
+    top: calc(-1 * var(--mobile-dropdown-item-height) - var(--menu-height));
     
     display: flex;
     flex-direction: column;
@@ -110,7 +110,7 @@
 }
 
 .dropDownOpen {
-    bottom: calc(100% - var(--menu-height) - var(--mobile-dropdown-item-height));
+    top: var(--menu-height);
 }
 
 /* .dropDownClose {
