@@ -39,7 +39,7 @@
     height: calc(100vh - var(--menu-height));
     height: -webkit-fill-available;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: var(--menu-height);
     overflow: scroll;
 }

@@ -17,6 +17,8 @@
 .desktopMenuContainer {
     width: 100%;
     height: var(--menu-height);
+    position: fixed;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -143,6 +145,9 @@
     .mobileMenuParent {
         display: none;
     }
+    .mobileMenuDropDown {
+        display: none;
+    }
 }
 
 @media all and (max-width: 649px) {
@@ -150,6 +155,9 @@
         display: none;
     }
     .mobileMenuParent {
+        display: flex;
+    }
+    .mobileMenuDropDown {
         display: flex;
     }
 }
