@@ -30,7 +30,7 @@ export default function MainPage() {
             <div className={`pageContainer + ${styles.contact_page}`}>
                 <Link href="https://boolalpha.com" className={styles.contact_item}>Built By BoolAlpha</Link>
                 <Link href="mailto:consult@boolalpha.com" className={styles.contact_item}>consult@boolalpha.com</Link>
-                <Link href="https://github.com/BoolAlpha" className={styles.contact_item}>GitHub Repo</Link>
+                <Link href="https://github.com/boolalpha/GPTLeetCode" className={styles.contact_item}>GitHub Repo</Link>
                 <Link href="https://leetcode.com/chatgptbot/" className={styles.contact_item}>Leetcode Profile</Link>
             </div>
         </>
